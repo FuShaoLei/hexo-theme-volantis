@@ -90,8 +90,8 @@
     <%- css(theme.plugins.nodewaves.css) %>
   <% } %>
 
-  <% if (config.favicon) { %>
-  <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(config.favicon) %>">
+  <% if (theme.myicon) { %>
+  <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(theme.myicon) %>">
   <% } %>
 
   <% if (theme.plugins.aplayer.enable) { %>
