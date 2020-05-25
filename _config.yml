@@ -76,14 +76,14 @@ style:
       # weight: normal
       # style: normal
   color:
-  #   site: '#21232F' # Website background color
+    site: '#F6F6F6' # Website background color
     site_inner: '#333' # Text color inside the website background
-    site_footer: '#fff' # Footer text color inside the website background
+    site_footer: '#333' # Footer text color inside the website background
   #   card: '#444' # Card background color
   #   text: '#fff' # The color of the text on the card.
-    theme: '#0395A7' # Main color
-    link: '#0395A7' # Link color
-  #   hover: '#ff5722' # Link highlight color
+    theme: '#0084FF' # Main color
+    link: '#0084FF' # Link color
+    hover: '#0084FF' # Link highlight color
   #   inner: '#333' # Text color inside the button
   #   block: '#555' # Block color
   #   inlinecode: '#555' # Inline code color
@@ -97,23 +97,23 @@ style:
 cover:
   scheme: docs # docs, blog
   display:
-    home: false
+    home: true
     archive: false
     others: false # can be written in front-matter 'cover: true'
   # logo:  https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/256/google_logo.png
-  title: Sorryfu
-  subtitle: ''
-  search: # search bar placeholder
-  features:
-    - name: 博客
-      icon: fas fa-play-circle
-      url: /
-    - name: 关于
-      icon: fas fa-book
-      url: /about/
-    - name: 归档
-      icon: fas fa-rss
-      url: archives/
+  title: Here is Sorryfu's Blog
+  subtitle: 'welcome:)'
+  # search: # search bar placeholder
+  # features:
+  #   - name: 博客
+  #     icon: fas fa-play-circle
+  #     url: /
+  #   - name: 关于
+  #     icon: fas fa-book
+  #     url: /about/
+  #   - name: 归档
+  #     icon: fas fa-rss
+  #     url: archives/
 
 
 # Navigation Bar
@@ -416,7 +416,7 @@ plugins:
 
   # Slide Background
   backstretch:
-    enable: true
+    enable: false
     js: https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js
     position: fixed       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     shuffle: true         # shuffle playlist
