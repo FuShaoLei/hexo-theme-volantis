@@ -101,8 +101,8 @@ cover:
     archive: false
     others: false # can be written in front-matter 'cover: true'
   # logo:  https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/256/google_logo.png
-  title: Here is Sorryfu's Blog
-  subtitle: 'welcome:)'
+  title: Sorryfu:)
+  # subtitle: 'Welcome:)'
   # search: # search bar placeholder
   # features:
   #   - name: 博客
@@ -133,6 +133,15 @@ navbar:
     - name: 关于
       icon: fas fa-info-circle
       url: about/
+    - name: 友链
+      icon: fas fa-link
+      url: friend/
+    - name: 留言板
+      icon: fa fa-cube
+      url: message/
+    - name: 笔记
+      icon: fa fa-check-circle
+      url: https://fushaolei.github.io/personal-note/
   search: Search...   # Search bar placeholder
 
 
