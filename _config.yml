@@ -5,7 +5,7 @@ style:
   scrollbar:
     size: 4px
     border: 2px
-    color: '#2196f3'
+    color: '#EC7259'
     hover: '#ff5722'
   navbar:
     height: 64px
@@ -75,20 +75,34 @@ style:
       # url: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-fonts/Monaco/Monaco.ttf
       # weight: normal
       # style: normal
-  color:
-    site: '#F6F6F6' # Website background color
-    site_inner: '#333' # Text color inside the website background
-    site_footer: '#333' # Footer text color inside the website background
+  # color:
+    # site: '#F6F6F6' # Website background color
+    # site_inner: '#333' # Text color inside the website background
+    # site_footer: '#333' # Footer text color inside the website background
   #   card: '#444' # Card background color
   #   text: '#fff' # The color of the text on the card.
-    theme: '#0084FF' # Main color
-    link: '#0084FF' # Link color
-    hover: '#0084FF' # Link highlight color
+    # theme: '#0084FF' # Main color
+    # link: '#0084FF' # Link color
+    # hover: '#0084FF' # Link highlight color
   #   inner: '#333' # Text color inside the button
   #   block: '#555' # Block color
   #   inlinecode: '#555' # Inline code color
   #   codeblock: '#555' # Codeblock color
   #   p: '#ccc' # Paragraph color
+  color:
+  #   site: '#2D2D2D'
+    site_inner: '#2196F3'
+  #   site_footer: '#d9d9d9'
+  #   card: '#3D3D3D'
+  #   text: '#d9d9d9'
+  #   theme: '#EC7259'
+  #   link: '#EC7259'
+  #   hover: '#EC7259'
+  #   inner: '#333'
+  #   block: '#333'
+  #   inlinecode: '#333'
+  #   codeblock: '#333'
+  #   p: '#d9d9d9'
 
 
 
@@ -124,24 +138,32 @@ navbar:
     title: Sorryfu
   menu:
     # The following can be written in `blog/source/_data/menu.yml`
-    - name: 博客
-      icon: fas fa-rss
-      url: /
-    - name: 归档
-      icon: fas fa-archive
-      url: archives/
-    - name: 关于
-      icon: fas fa-info-circle
-      url: about/
-    - name: 友链
-      icon: fas fa-link
-      url: friend/
-    - name: 留言板
-      icon: fa fa-cube
-      url: message/
     - name: 笔记
-      icon: fa fa-check-circle
-      url: https://fushaolei.github.io/personal-note/
+      icon: fas fa-feather-alt
+      rows:
+        - name: Java
+          url: /book-java/01/index.html
+        - name: 网络原理
+          url: /book-network/00/index.html
+    - name: 项目
+      icon: fas fa-cube
+      url: project/
+    - name: 更多
+      icon: fas fa-ellipsis-v
+      rows:
+        - name: 关于
+          icon: fas fa-info-circle
+          url: about/
+        - name: hr
+        - name: 友链
+          icon: fas fa-link
+          url: friend/
+        - name: 留言板
+          icon: fas fa-pen
+          url: message/
+        - name: 归档
+          icon: fas fa-archive
+          url: archives/
   search: Search...   # Search bar placeholder
 
 
@@ -216,8 +238,8 @@ meta:
       img: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png
     - id: qzone
       img: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png
-    - id: weibo
-      img: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png
+    # - id: weibo
+    #   img: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png
     # - id: qrcode # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
     #   img: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png
     # - id: telegram
@@ -298,10 +320,10 @@ widget:
       title: 热门标签
       url: /blog/tags/
     min_font: 14
-    max_font: 24
+    max_font: 14
     color: true
-    start_color: '#999'
-    end_color: '#555'
+    start_color: '#606060'
+    end_color: '#606060'
   # ---------------------------------------
   # related posts widget
   related_posts:
@@ -312,39 +334,6 @@ widget:
       title: 相关文章
     max_count: 5
   # ---------------------------------------
-  # copyright widget (valid only in articles)
-  # copyright:
-  #   class: copyright
-  #   display: [desktop, mobile] # [desktop, mobile]
-  #   blockquote: true
-  #   permalink: '本文永久链接是：'
-  #   content:
-  #     - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
-  #     - permalink
-  # ---------------------------------------
-  # qrcode widget
-  # donate:
-  #   class: qrcode
-  #   display: [desktop, mobile] # [desktop, mobile]
-  #   height: 64px  # Automatic height if not set
-  #   fancybox: true
-  #   images:
-  #     - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png
-  #     - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png
-  # ---------------------------------------
-  # references widget
-  references:
-    class: references # is subclass of list
-    display: [desktop, mobile] # [desktop, mobile]
-    header:
-      icon: fas fa-quote-left
-      title: 参考资料
-  related_repos:
-    class: references # is subclass of list
-    display: [desktop, mobile] # [desktop, mobile]
-    header:
-      icon: fab fa-github
-      title: 源码链接
 
   # You can add your own widget here or 'blog/source/_data/widget.yml'
   # class: text, list, grid, qrcode, page, ... see more at https://volantis.js.org/
@@ -355,15 +344,11 @@ footer:
   # layout of footer: [aplayer, social, license, info, copyright]
   layout: [aplayer, social, license, info, copyright]
   social:
-    - icon: fas fa-rss
-      url: atom.xml
     - icon: fas fa-envelope
-      url: mailto:me@xaoxuu.com
+      url: 1563250958@qq.com
     - icon: fab fa-github
-      url: https://github.com/xaoxuu
-    - icon: fas fa-headphones-alt
-      url: https://music.163.com/#/user/home?id=63035382
-  copyright: '[Copyright © 2017-2020 Mr. X](https://xaoxuu.com)'
+      url: https://github.com/FuShaoLei
+  copyright: '[Copyright © 2017-2020 Sorryfu](https://fushaolei.github.io/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
 
@@ -393,7 +378,7 @@ plugins:
   # highlight.js
   highlightjs:
     js: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js
-    css: https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css
+    css: https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/srcery.css
     # more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles
 
   # https://scrollrevealjs.org/api/reveal.html
